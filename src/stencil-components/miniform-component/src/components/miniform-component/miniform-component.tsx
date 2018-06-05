@@ -24,9 +24,9 @@ export class MiniformComponent {
       <form onSubmit={(e) => this.handleSubmit(e)}>
         <label>
           Name:
-          <input type="text" placeholder="Name here" value={this.value} onInput={(event) => this.handleChange(event)} />
+          <input type='text' placeholder='Name here' value={this.value} onInput={(event) => this.handleChange(event)} />
         </label>
-        <input type="submit" value="Submit" />
+        <input type='submit' value='Submit' />
       </form>
     );
   }

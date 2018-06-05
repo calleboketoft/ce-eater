@@ -12,15 +12,15 @@
   "scripts": {
     "build": "stencil build --dev",
     "build:watch": "stencil build --dev --watch",
+    "start": "npm run build:watch",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
-    "start": "npm run dev",
     "test": "jest",
     "test.watch": "jest --watch"
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "^0.9.1",
+    "@stencil/core": "^0.9.7",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
