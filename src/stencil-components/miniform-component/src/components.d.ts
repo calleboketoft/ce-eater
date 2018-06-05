@@ -11,9 +11,7 @@ declare global {
     interface Element {}
     export interface IntrinsicElements {}
   }
-  namespace JSXElements {
-
-  }
+  namespace JSXElements {}
 
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
@@ -25,14 +23,16 @@ declare global {
   interface HTMLAttributes {}
 }
 
+
 declare global {
+
   namespace StencilComponents {
-    interface MiniformComponent {}
+    interface MiniformComponent {
+
+    }
   }
 
-  interface HTMLMiniformComponentElement
-    extends StencilComponents.MiniformComponent,
-      HTMLStencilElement {}
+  interface HTMLMiniformComponentElement extends StencilComponents.MiniformComponent, HTMLStencilElement {}
 
   var HTMLMiniformComponentElement: {
     prototype: HTMLMiniformComponentElement;
@@ -51,13 +51,11 @@ declare global {
   }
   namespace JSXElements {
     export interface MiniformComponentAttributes extends HTMLAttributes {
-      onFormSubmitted?: (event: CustomEvent) => void;
+      'onFormSubmitted'?: (event: CustomEvent) => void;
     }
   }
 }
 
-declare global {
-  namespace JSX { interface StencilJSX {} }
-}
+declare global { namespace JSX { interface StencilJSX {} } }
 
 export declare function defineCustomElements(window: any): void;

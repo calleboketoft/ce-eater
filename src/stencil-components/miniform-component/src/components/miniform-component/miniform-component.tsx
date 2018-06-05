@@ -9,7 +9,7 @@ export class MiniformComponent {
   @Event() formSubmitted: EventEmitter;
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     console.log(this.value);
     // send data to our backend
     this.formSubmitted.emit(this.value);
@@ -24,7 +24,7 @@ export class MiniformComponent {
       <form onSubmit={(e) => this.handleSubmit(e)}>
         <label>
           Name:
-          <input type="text" value={this.value} onInput={(event) => this.handleChange(event)} />
+          <input type="text" placeholder="Name here" value={this.value} onInput={(event) => this.handleChange(event)} />
         </label>
         <input type="submit" value="Submit" />
       </form>
