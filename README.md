@@ -8,3 +8,6 @@ Develop Stencil Web Component
 - navigate to `src/stencil-components/miniform-component`
 - `npm install`
 - `npm start`
+
+View in browser
+- http://localhost:4200
